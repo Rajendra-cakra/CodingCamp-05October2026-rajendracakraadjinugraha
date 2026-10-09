@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A personal productivity dashboard with timer, task management, and quick links">
+    <title>To-Do List Life Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header__controls">
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+                <span class="theme-toggle__icon">🌙</span>
+            </button>
+        </div>
+        <div class="greeting">
+            <h1 id="greeting-text" class="greeting__text">Good Morning</h1>
+            <p id="greeting-date" class="greeting__date">Monday, January 1, 2024</p>
+            <p id="greeting-time" class="greeting__time">00:00:00</p>
+        </div>
+        <div class="user-profile">
+            <label for="user-name-input" class="user-profile__label">Your Name:</label>
+            <input 
+                type="text" 
+                id="user-name-input" 
+                class="user-profile__input" 
+                placeholder="Enter your name"
+                maxlength="50"
+                aria-label="Enter your name for personalized greeting"
+            >
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="timer-section" aria-labelledby="timer-heading">
+            <h2 id="timer-heading" class="section__heading">Focus Timer</h2>
+            <div class="timer">
+                <div id="timer-display" class="timer__display" aria-live="polite" aria-atomic="true">25:00</div>
+                <div class="timer__controls">
+                    <button id="timer-start" class="button button--primary">Start</button>
+                    <button id="timer-stop" class="button button--secondary">Stop</button>
+                    <button id="timer-reset" class="button button--secondary">Reset</button>
+                </div>
+                <div class="timer__config">
+                    <label for="timer-duration-input" class="timer__config-label">Duration (minutes):</label>
+                    <input 
+                        type="number" 
+                        id="timer-duration-input" 
+                        class="timer__config-input" 
+                        min="1" 
+                        max="120" 
+                        placeholder="25"
+                        aria-label="Set timer duration in minutes (1-120)"
+                        aria-describedby="timer-duration-error"
+                    >
+                    <button id="timer-set-duration" class="button button--secondary">Set</button>
+                </div>
+                <p id="timer-duration-error" class="error-message" role="alert"></p>
+            </div>
+        </section>
+
+        <section class="tasks-section" aria-labelledby="tasks-heading">
+            <h2 id="tasks-heading" class="section__heading">Tasks</h2>
+            <form id="task-form" class="task-form">
+                <label for="task-input" class="visually-hidden">New task</label>
+                <input 
+                    type="text" 
+                    id="task-input" 
+                    class="task-form__input" 
+                    placeholder="Add a new task..."
+                    maxlength="500"
+                    aria-label="Enter new task text"
+                >
+                <button type="submit" class="button button--primary">Add Task</button>
+            </form>
+            <ul id="task-list" class="task-list" role="list">
+                <!-- Tasks will be dynamically inserted here -->
+            </ul>
+        </section>
+
+        <section class="links-section" aria-labelledby="links-heading">
+            <h2 id="links-heading" class="section__heading">Quick Links</h2>
+            <form id="link-form" class="link-form">
+                <div class="link-form__group">
+                    <label for="link-name-input" class="link-form__label">Name:</label>
+                    <input 
+                        type="text" 
+                        id="link-name-input" 
+                        class="link-form__input" 
+                        placeholder="e.g., GitHub"
+                        maxlength="100"
+                        aria-label="Enter link name"
+                    >
+                </div>
+                <div class="link-form__group">
+                    <label for="link-url-input" class="link-form__label">URL:</label>
+                    <input 
+                        type="url" 
+                        id="link-url-input" 
+                        class="link-form__input" 
+                        placeholder="e.g., github.com"
+                        aria-label="Enter link URL"
+                    >
+                </div>
+                <button type="submit" class="button button--primary">Add Link</button>
+            </form>
+            <div id="link-list" class="link-list" role="list">
+                <!-- Links will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
