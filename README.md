@@ -4,7 +4,7 @@ A personal productivity dashboard built with vanilla JavaScript that combines ti
 
 ## 🌐 Live Demo
 
-[View Live Demo](https://USERNAME.github.io/REPO-NAME/)
+[View Live Demo](https://rajendra-cakra.github.io/CodingCamp-05October2026-rajendracakraadjinugraha/)
 
 ## ✨ Features
 
