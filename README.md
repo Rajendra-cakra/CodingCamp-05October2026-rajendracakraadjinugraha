@@ -4,7 +4,7 @@ A personal productivity dashboard built with vanilla JavaScript that combines ti
 
 ## 🌐 Live Demo
 
-[View Live Demo](https://rajendra-cakra.github.io/CodingCamp-05October2026-rajendracakraadjinugraha/)
+[View Live Demo](https://USERNAME.github.io/REPO-NAME/)
 
 ## ✨ Features
 
@@ -52,12 +52,14 @@ A personal productivity dashboard built with vanilla JavaScript that combines ti
 ```
 CodingCamp-05October2026-rajendracakraadjinugraha/
 │
-├── index.html              # Main HTML file
-├── styles.css              # Complete stylesheet with light/dark themes
-├── app.js                  # All JavaScript modules and application logic
-├── README.md               # Project documentation
+├── css/
+│   └── style.css          # Complete stylesheet with light/dark themes
 │
-└── [backup and test files] # Development artifacts (not needed for deployment)
+├── js/
+│   └── app.js             # All JavaScript modules and application logic
+│
+├── index.html             # Main HTML file
+└── README.md              # Project documentation
 ```
 
 ## 🚀 How to Run Locally
